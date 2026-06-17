@@ -1,7 +1,7 @@
 // inputNode.js
 
 import { useState } from 'react';
-import { Handle, Position } from 'reactflow';
+import { BaseNode } from '../components/BaseNode';
 
 export const InputNode = ({ id, data }) => {
   const [currName, setCurrName] = useState(data?.inputName || id.replace('customInput-', 'input_'));
@@ -16,12 +16,19 @@ export const InputNode = ({ id, data }) => {
   };
 
   return (
-    <div style={{width: 200, height: 80, border: '1px solid black'}}>
+
+    <BaseNode 
+    id={id} 
+    title="Input"
+    outputs={
+      [
+        {
+        id: "value",
+        }
+      ]}
+    >
       <div>
-        <span>Input</span>
-      </div>
-      <div>
-        <label>
+       <label>
           Name:
           <input 
             type="text" 
@@ -37,11 +44,6 @@ export const InputNode = ({ id, data }) => {
           </select>
         </label>
       </div>
-      <Handle
-        type="source"
-        position={Position.Right}
-        id={`${id}-value`}
-      />
-    </div>
+    </BaseNode>
   );
 }
