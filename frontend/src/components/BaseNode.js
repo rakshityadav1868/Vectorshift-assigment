@@ -1,6 +1,6 @@
 import { Handle, Position } from "reactflow";
 
-export const BaseNode = ({id,title,children,inputs=[],outputs=[]}) => {
+export const BaseNode = ({id,title,children,inputs=[],outputs=[],width=200,minHeight=80}) => {
     return (
         <div
         style={{
