@@ -1,4 +1,4 @@
-// toolbar.js
+// toolbar.js Displays draggable node types available
 
 import { DraggableNode } from './draggableNode';
 
