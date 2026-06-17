@@ -27,6 +27,9 @@ export const BaseNode = ({id,title,children,inputs=[],outputs=[]}) => {
                 type="target"
                 position={Position.Left}
                 id={`${id}-${input.id}`}
+                style={{
+                    top: `${((index + 1) * 100) / (inputs.length + 1)}%` // improves handle position so right and left dont overlap
+                }}
               />
             })
         }
@@ -39,6 +42,9 @@ export const BaseNode = ({id,title,children,inputs=[],outputs=[]}) => {
                 type="source"
                 position={Position.Right}
                 id={`${id}-${output.id}`}
+                style={{
+                    top: `${((index + 1) * 100) / (outputs.length + 1)}%`, // improves handle position so right and left dont overlap
+                }}
               />
             })
         }
