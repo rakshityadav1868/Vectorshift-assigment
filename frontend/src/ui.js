@@ -7,7 +7,6 @@ import ReactFlow, { Controls, Background, MiniMap } from 'reactflow';
 import { useStore } from './store';
 import { shallow } from 'zustand/shallow';
 import { nodeTypes } from './nodes/nodeRegistry';
-
 import 'reactflow/dist/style.css';
 
 const gridSize = 20;
