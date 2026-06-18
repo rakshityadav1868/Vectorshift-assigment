@@ -1,3 +1,5 @@
+// Central registry that maps node types
+
 import { InputNode } from "./inputNode";
 import { OutputNode } from "./outputNode";
 import { LLMNode } from "./llmNode";

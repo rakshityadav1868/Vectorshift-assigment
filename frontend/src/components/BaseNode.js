@@ -1,12 +1,11 @@
 import { Handle, Position } from "reactflow";
 
 // Reusable wrapper for all nodes
-export const BaseNode = ({id,title,children,inputs=[],outputs=[],width=200,height='auto',minHeight=80}) => {
+export const BaseNode = ({id,title,children,inputs=[],outputs=[],width=200,minHeight=80}) => {
     return (
         <div
         style={{
             width,
-            height,
             minHeight,
             border: "1px solid black",
             padding: 10,
