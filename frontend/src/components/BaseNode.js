@@ -7,9 +7,6 @@ export const BaseNode = ({id,title,children,inputs=[],outputs=[],width=200,minHe
         style={{
             width,
             minHeight,
-            border: "1px solid black",
-            padding: 10,
-            borderRadius: 8,
             position: "relative",
         }}
         >
